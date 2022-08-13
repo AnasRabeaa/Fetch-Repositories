@@ -1,0 +1,70 @@
+// Import Global Rules
+@use "./layout/global-rules";
+// Import Colors
+@use "./varables/colors" as *;
+
+.repos-container {
+    width: 800px;
+    background-color: $main_color;
+    margin: 50px auto;
+        border-radius: 6px;
+    .get-repos {
+        padding: 20px;
+        display: flex;
+        background-color: $alt_color;
+        border-radius: 6px;
+        input{
+            width: 100%;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            height: 55px;
+        }
+        input:focus {
+            outline: 2px solid $main_color;
+        }
+        .get-button {
+            width: 140px;
+            margin-left: 10px;
+            border-radius: 6px;
+            border: none;
+            background-color: $main_color;
+            margin-left: 10px;
+            color: #01023d;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+    .show-data{
+        padding:20px;
+        .repo-box {
+            padding: 15px;
+            background-color: #fff;
+            a, span {
+                float: right;
+                margin-left: 4px;
+                border-radius: 4px;
+                color: #FFF;
+                font-size: 12px;
+                width: 90px;
+                text-align: center;
+                padding: 4px;
+            }
+            a {
+                text-decoration: none;
+                background-color: #b8436a;
+            }
+            span {
+                background-color: #009688;
+            }
+        }
+        .repo-box:hover {
+            background-color: #009688;
+        }
+        .repo-box:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}
+
